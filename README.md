@@ -1,2 +1,3 @@
-# java_osgi_virgo_cms
-cms back-end interface with virgo osgi
+technology: java+spring+virgo+maven
+purpose: cms back-end interface with virgo osgi
+
