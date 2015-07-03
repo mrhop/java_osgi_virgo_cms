@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	xmlns:osgi="http://www.springframework.org/schema/osgi">
+
+	<!-- import the DataSource from OSGi -->
+	<osgi:reference id="dataSource" interface="javax.sql.DataSource"/>
+	
+
+	<!-- export the directory bean to OSGi under the Directory interface -->
+	<osgi:service ref="cmsElementService" interface="net.sharesuite.cms.backend.service.CmsElementService"/>
+
+	<osgi:service ref="cmsWebsiteService" interface="net.sharesuite.cms.backend.service.CmsWebsiteService"/>
+
+	<osgi:service ref="cmsPageService" interface="net.sharesuite.cms.backend.service.CmsPageService"/>
+
+	<osgi:service ref="cmsPageTemplateService" interface="net.sharesuite.cms.backend.service.CmsPageTemplateService"/>
+	
+</beans>

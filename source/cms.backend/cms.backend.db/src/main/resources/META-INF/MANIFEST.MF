@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-Vendor: SpringSource
+Bundle-Classpath: .
+Bundle-Version: 1.0.0
+Tool: Bundlor 1.1.2.RELEASE
+Bundle-Name: cms backend DataSource
+Bundle-ManifestVersion: 2
+Import-Package: javax.sql;version=0,
+ org.apache.commons.dbcp;version="[1.2.2.osgi,1.2.2.osgi]",
+ org.postgresql;version="8.3.604"
+Bundle-SymbolicName: cms.backend.db
+

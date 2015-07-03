@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: cms backend DataSource
+Bundle-SymbolicName: cms.backend.db
+Bundle-Vendor: SpringSource
+Bundle-Version: 1.0.0
+Import-Package: 
+ org.postgresql;version="8.3.604"
+Import-Template: 
+ org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]",
+ javax.sql;version="0"

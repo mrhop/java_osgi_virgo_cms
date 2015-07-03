@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Import-Bundle: org.springframework.osgi.web;version="[1.2.1,1.2.1]",com.springsource.org.apache.taglibs.standard;version="[
+ 1.1.2,2.0)",com.springsource.org.codehaus.jackson;version="[1.4.3,1.4.3]",
+ com.springsource.org.codehaus.jackson.mapper;version="[1.4.3,1.4.3]",
+ com.springsource.org.joda.time;version="[1.6.2,1.6.2]"
+Bundle-ClassPath: .,WEB-INF/classes
+Bundle-Version: 1.0.0
+Tool: Bundlor 1.1.0.BUILD-20101220120024
+Bundle-Name: cms backend Web
+Import-Library: org.springframework.spring;version="[3.0, 3.5)"
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: cms.backend.web
+Web-ContextPath: cmsbackend
+Import-Package: freemarker.cache;version="[2.3.18,2.3.18]",
+ javax.servlet;version="[3.0.0,3.1.0]",
+ javax.servlet.jsp.jstl.core;version="[1.2.0,2.0.0)",
+ javax.sql,
+ org.apache.commons.dbcp,
+ org.springframework.beans.factory.annotation;version="[3.0,3.5)",
+ org.springframework.core.io;version="[3.0,3.5)",
+ org.springframework.stereotype;version="[3.0,3.5)",
+ org.springframework.http.converter.json;version="[3.0,3.5)",
+ org.springframework.web.bind.annotation;version="[3.0,3.5)",
+ org.springframework.web.context;version="[3.0,3.5)",
+ org.springframework.web.servlet;version="[3.0,3.5)",
+ org.springframework.web.servlet.mvc.annotation;version="[3.0,3.5)",
+ org.springframework.web.servlet.view.freemarker;version="[3.0,3.5)",
+ org.springframework.osgi.web.context.support;version="[1.2.1,1.2.1]",
+ net.sharesuite.cms.backend.domain;version="[1.0,4.0)",
+ net.sharesuite.cms.backend.service;version="[1.0,4.0)",
+ net.sharesuite.cms.backend.dto;version="[1.0,4.0)"
+

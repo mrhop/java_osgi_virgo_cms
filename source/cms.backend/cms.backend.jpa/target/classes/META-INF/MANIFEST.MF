@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Export-Package: net.sharesuite.cms.backend.domain;version="1.0.0";uses
+ :="javax.persistence",net.sharesuite.cms.backend.dto;version="1.0.0";
+ uses:="org.codehaus.jackson.annotate",net.sharesuite.cms.backend.repo
+ sitory;version="1.0.0";uses:="net.sharesuite.cms.backend.util.reposit
+ ory",net.sharesuite.cms.backend.repository.impl;version="1.0.0";uses:
+ ="net.sharesuite.cms.backend.repository,net.sharesuite.cms.backend.ut
+ il.repository,org.springframework.stereotype",net.sharesuite.cms.back
+ end.service;version="1.0.0";uses:="net.sharesuite.cms.backend.dto",ne
+ t.sharesuite.cms.backend.service.impl;version="1.0.0";uses:="net.shar
+ esuite.cms.backend.domain,net.sharesuite.cms.backend.dto,net.sharesui
+ te.cms.backend.service,org.springframework.beans.factory.annotation,o
+ rg.springframework.stereotype",net.sharesuite.cms.backend.util.reposi
+ tory;version="1.0.0";uses:="javax.persistence,org.springframework.bea
+ ns.factory.annotation",net.sharesuite.cms.backend.util.tool;version="
+ 1.0.0";uses:="org.codehaus.jackson.map,org.springframework.beans"
+Import-Bundle: com.springsource.org.eclipse.persistence;version="[2.0.
+ 0, 2.1.0)",com.springsource.org.eclipse.persistence.jpa;version="[2.0
+ .0, 2.1.0)",org.springframework.beans;version="[3.1.0.RELEASE,3.1.0.R
+ ELEASE]",com.springsource.org.codehaus.jackson;version="[1.4.3,1.4.3]
+ ",com.springsource.org.codehaus.jackson.mapper;version="[1.4.3,1.4.3]
+ "
+Bundle-Vendor: SpringSource
+Bundle-Version: 1.0.0
+Tool: Bundlor 1.0.0.RELEASE
+Bundle-Name: cms backend JPA
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: cms.backend.jpa
+Import-Package: javax.persistence;version="[2, 2.1)",javax.persistence
+ .criteria;version="[2, 2.1)",javax.sql;version="0",net.sharesuite.cms
+ .backend;version="[1.0, 4.0)",org.codehaus.jackson.annotate,org.codeh
+ aus.jackson.map,org.springframework.beans;version="[3.0, 3.5)",org.sp
+ ringframework.beans.factory.annotation;version="[3.0, 3.5)",org.sprin
+ gframework.context.weaving;version="[3.0, 3.5)",org.springframework.d
+ ao.annotation;version="[3.0, 3.5)",org.springframework.orm.jpa;versio
+ n="[3.0, 3.5)",org.springframework.orm.jpa.vendor;version="[3.0, 3.5)
+ ",org.springframework.stereotype;version="[3.0, 3.5)",org.springframe
+ work.transaction.aspectj;version="[3.0, 3.5)"
+

@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: cms backend JPA
+Bundle-SymbolicName: cms.backend.jpa
+Bundle-Vendor: SpringSource
+Bundle-Version: 1.0.0
+Import-Template: 
+ org.springframework.*;version="[3.0, 3.5)",
+ net.sharesuite.cms.backend;version="[1.0, 4.0)",
+ org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]",
+ javax.sql;version="0"
+Import-Bundle: 
+ com.springsource.org.eclipse.persistence;version="[2.0.0, 2.1.0)",
+ com.springsource.org.eclipse.persistence.jpa;version="[2.0.0, 2.1.0)",
+ org.springframework.beans;version="[3.1.0.RELEASE,3.1.0.RELEASE]",
+ com.springsource.org.codehaus.jackson;version="[1.4.3,1.4.3]",
+ com.springsource.org.codehaus.jackson.mapper;version="[1.4.3,1.4.3]"
+Import-Package: 
+ org.springframework.context.weaving;version="[3.0, 3.5)",
+ org.springframework.transaction.aspectj;version="[3.0, 3.5)",
+ javax.persistence.criteria;version="[2, 2.1)",
+ javax.persistence;version="[2, 2.1)"
+Excluded-Imports: 
+ org.springframework.test.*,
+ org.junit.*

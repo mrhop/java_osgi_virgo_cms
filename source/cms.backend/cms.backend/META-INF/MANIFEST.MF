@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Application-SymbolicName: cms.backend
+Application-Version: 3.0.0.RELEASE
+Application-Name: cms backend PAR
+

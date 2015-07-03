@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>net.sharesuite</groupId>
+		<artifactId>cms.backend.parent</artifactId>
+		<version>1.0.0.RELEASE</version>
+		<relativePath>../cms.backend.parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>cms.backend</artifactId>
+	<name>cms.backend</name>
+	<description>cms.backend PAR</description>
+	<packaging>par</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.sharesuite</groupId>
+			<artifactId>cms.backend.jpa</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sharesuite</groupId>
+			<artifactId>cms.backend.db</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sharesuite</groupId>
+			<artifactId>cms.backend.web</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- Needs to be included in the PAR so that its classes are loadable via 
+			the PAR's synthetic context class loader -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>com.springsource.org.postgresql.jdbc4</artifactId>
+		</dependency>
+		<!-- Required for the web bundle as dependencies are not propagated up 
+			from war build types -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>com.springsource.freemarker</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-par-plugin</artifactId>
+				<version>1.0.0.RELEASE</version>
+				<configuration>
+					<applicationSymbolicName>cms.backend</applicationSymbolicName>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<configuration>
+					<outputDirectory>${project.build.directory}/par-provided</outputDirectory>
+					<overWriteIfNewer>true</overWriteIfNewer>
+					<excludeGroupIds>net.sharesuite,org.apache.log4j,org.postgresql</excludeGroupIds>
+				</configuration>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-dependency-plugin
+										</artifactId>
+										<versionRange>
+											[2.1,)
+										</versionRange>
+										<goals>
+											<goal>
+												copy-dependencies
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

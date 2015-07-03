@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: cms backend Web
+Bundle-SymbolicName: cms.backend.web
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .,WEB-INF/classes
+Web-ContextPath: cmsbackend
+Import-Template: 
+ org.springframework.*;version="[3.0, 3.5)",
+ net.sharesuite.cms.backend.*;version="[1.0, 4.0)"
+Import-Package: 
+ javax.servlet.jsp.jstl.core;version="[1.2.0, 2.0.0)",
+ javax.servlet;version="[3.0.0, 3.1.0)",
+ org.eclipse.virgo.web.dm;version="[3.0.0, 4.0.0)",
+ freemarker.cache;version="[2.3.18,2.3.18]"
+Import-Bundle: 
+ com.springsource.org.apache.taglibs.standard;version="[1.1.2,2.0)",com.springsource.org.codehaus.jackson;version="[1.4.3,1.4.3]",
+ com.springsource.org.codehaus.jackson.mapper;version="[1.4.3,1.4.3]",com.springsource.org.joda.time;version="[1.6.2,1.6.2]"
+Import-Library: 
+ org.springframework.spring;version="[3.0, 3.5)"
+Excluded-Exports: 
+ cms.backend.tests,
+ cms.backend.web,
+ images,
+ styles,
+ javascripts
+Excluded-Imports: 
+ org.springframework.test.*,
+ org.junit.*
